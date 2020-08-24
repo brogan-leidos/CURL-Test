@@ -87,7 +87,7 @@ function formatAbilityTooltip(champion, tooltip, spellType) {
       formatValue = filterKey[0].coeff;      
     }
     else {
-      formatValue = `<span tooltip="toFormat[1]">?</span>`;
+      formatValue = `<abbr title="toFormat[1]">?</abbr>`;
     }
     
     tooltip = tooltip.replace(toFormat[0], formatValue);
