@@ -113,8 +113,8 @@ function setBackground(name) {
   fetch(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_0.jpg`)
     .then(response => response.blob())
     .then(result => {
-      var area = document.getElementById("displayArea");
-      area.style.background = result;
+      var area = document.getElementById("body");
+      area.style.background = `url(${result})`;
       area.style.backgroundSize = "cover";
       area.style.backgroundRepeat = "no-repeat";
   });
