@@ -62,7 +62,7 @@ function parseChampionAbilities(champion) {
   var rImage = spellTemplate.replace("{0}", champion.spells[3].image.full);
 
     
-  var retString = `<image src=${passiveImage} /> ${passiveText} <br>
+  return `<image src=${passiveImage} /> ${passiveText} <br>
                     <image src=${qImage} /> ${qText} <br>
                     <image src=${wImage} /> ${wText} <br>
                     <image src=${eImage} /> ${eText} <br>
