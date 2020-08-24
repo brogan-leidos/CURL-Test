@@ -109,20 +109,12 @@ function displayInArea(string) {
 }
 
 function setBackground(name) {
-//http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg
   var area = document.getElementsByTagName("BODY")[0];
-  area.background = `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_0.jpg)`;
+  area.style.background = `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_0.jpg)`;
   area.style.backgroundSize = "cover";
-  area.style.backgroundRepeat = "no-repeat";
-  
-  //   fetch(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_0.jpg`)
-//     .then(response => response.blob())
-//     .then(result => {
-//       var area = document.getElementsByTagName("BODY")[0];
-//       area.background = `url(${result})`;
-//       area.style.backgroundSize = "cover";
-//       area.style.backgroundRepeat = "no-repeat";
-//   });
+  area.style.backgroundRepeat = "no-repeat";   
 }
+
+//http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg
 //http://ddragon.leagueoflegends.com/cdn/10.16.1/img/passive/Anivia_P.png
 //http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/FlashFrost.png
