@@ -100,7 +100,7 @@ function formatAbilityTooltip(champion, tooltip, spellType) {
         formatValue = filterKey[0].coeff;
       }
     }
-   if (formatValue = "") {
+   if (formatValue == "") {
       formatValue = `<abbr title="${toFormat[1]}">?</abbr>`;
     }
     
