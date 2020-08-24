@@ -1,4 +1,4 @@
-var version = "10.16.1";
+var version;
 
 var ChampName = "";
 var AP = "";
