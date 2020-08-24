@@ -80,7 +80,7 @@ function formatAbilityTooltip(champion, tooltip, spellType) {
     
     var formatValue = "";
     if (toFormat[1][0] == "e") {
-      formatValue = champion.spells[spellType].effect[parseInt(toFormat[1][1])][level];
+      formatValue = champion.spells[spellType].effectBurn[parseInt(toFormat[1][1])];
     }
     else if (toFormat[1][0] == "a") {
       var filterKey = champion.spells[spellType].vars.filter(a => a.key == toFormat[1]);
