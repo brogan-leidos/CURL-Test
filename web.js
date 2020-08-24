@@ -36,10 +36,11 @@ function fetchChampion(name) {
   var data = "";
   fetch(fetchUrl)
     .then(response => response.json())
-    .then(fetchData => data = fetchData);
-  
-  var abilities = parseChampionAbilities(data.data[name]);
-  displayInArea(abilities);
+    .then(fetchData => {data = fetchData;
+      var abilities = parseChampionAbilities(data.data[name]);
+      displayInArea(abilities);             
+    });
+
 }
 
 function parseChampionAbilities(champion) {  
