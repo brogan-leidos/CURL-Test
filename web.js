@@ -38,7 +38,7 @@ function fetchChampion(name) {
     .then(response => response.json())
     .then(fetchData => data = fetchData);
   
-  var abilities = parseChampionAbilities(JSON.parse(data).data[name]);
+  var abilities = parseChampionAbilities(data.data[name]);
   displayInArea(abilities);
 }
 
