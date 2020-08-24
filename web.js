@@ -2,6 +2,7 @@
 
 export default () => {
   document.getElementById("calcButton").addEventListener('click', () => {
+    fetchData();
   });
 
   
@@ -9,14 +10,25 @@ export default () => {
 }
 
 function firstRun() {
-  var champName = document.getElementById("champName").value;
-  var AP = document.getElementById("apInput").value;
-  var MagicPen = document.getElementById("mpInput").value;
-  var UseOffCd = document.getElementById("useOffCd").value;
-  
-  
+  return;
 }
 
-function fetchChampions() {
+function fetchData() {
+  getInputs();
+  fetchChamptions();
+}
 
+function getInputs() {
+  var ChampName = document.getElementById("champName").value;
+  var AP = document.getElementById("apInput").value;
+  var MagicPen = document.getElementById("mpInput").value;
+  var UseOffCd = document.getElementById("useOffCd").value;  
+}
+
+// fetch url: http://ddragon.leagueoflegends.com/cdn/10.16.1/data/en_US/champion/<champname>.json
+function fetchChampions() {
+  var fetchUrl = ` http://ddragon.leagueoflegends.com/cdn/10.16.1/data/en_US/champion/${ChampName}.json`
+  fetch(fetchUrl)
+    .then(response => response.json())
+    .then(data => console.log(data));
 }
