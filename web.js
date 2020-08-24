@@ -42,7 +42,7 @@ function fetchChampion(name) {
   displayInArea(abilities);
 }
 
-parseChampionAbilities(champion) {  
+function parseChampionAbilities(champion) {  
   var passiveTemplate = `http://ddragon.leagueoflegends.com/cdn/${version}/img/passive/{0}`;
   var spellTemplate = `http://ddragon.leagueoflegends.com/cdn/${version}/img/spell/{0}`;
 
