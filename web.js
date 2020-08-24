@@ -80,7 +80,7 @@ function parseChampionAbilities(champion) {
 
 function formatAbilityTooltip(champion, tooltip, spellType) {
   var level = 0;
-  while(true) {
+  while(true) {    
     var toFormat = tooltip.match(/{{\s(\w*)\s}}/);
     if (toFormat == null) {
       break;
@@ -92,16 +92,15 @@ function formatAbilityTooltip(champion, tooltip, spellType) {
     }
     else if (toFormat[1][0] == "a") {
       var filterKey = champion.spells[spellType].vars.filter(a => a.key == toFormat[1]);
-      formatValue = filterKey[0].coeff;      
+      formatValue = filterKey[0].coeff;    
     }
     else if (toFormat[1][0] == "f") {
       var filterKey = champion.spells[spellType].vars.filter(a => a.key == toFormat[1]);
-      if (filterKey.length == 0) {
-        continue;
+      if (filterKey.length != 0) {
+        formatValue = filterKey[0].coeff;
       }
-      formatValue = filterKey[0].coeff;      
     }
-    else {
+   if (formatValue = "") {
       formatValue = `<abbr title="${toFormat[1]}">?</abbr>`;
     }
     
