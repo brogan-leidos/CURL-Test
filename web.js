@@ -63,11 +63,11 @@ function parseChampionAbilities(champion) {
   var rImage = spellTemplate.replace("{0}", champion.spells[3].image.full);
 
     
-  return `<image src=${passiveImage} class="abilityImage" /> <span class="abilityBlock">${passiveText} </span><br>
-                    <image src=${qImage} class="abilityImage" /> <span class="abilityBlock"> ${qText} </span><br>
-                    <image src=${wImage} class="abilityImage" /> <span class="abilityBlock"> ${wText} </span><br>
-                    <image src=${eImage} class="abilityImage" /> <span class="abilityBlock"> ${eText} </span><br>
-                    <image src=${rImage} class="abilityImage" /> <span class="abilityBlock"> ${rText} </span><br>`;
+  return `<div class="abilityBlock"><image src=${passiveImage} class="abilityImage" /> <span class="abilityText">${passiveText} </span></div>
+                    <div class="abilityBlock"><image src=${qImage} class="abilityImage" /> <span class="abilityText"> ${qText} </span></div>
+                    <div class="abilityBlock"><image src=${wImage} class="abilityImage" /> <span class="abilityText"> ${wText} </span></div>
+                    <div class="abilityBlock"><image src=${eImage} class="abilityImage" /> <span class="abilityText"> ${eText} </span></div>
+                    <div class="abilityBlock"><image src=${rImage} class="abilityImage" /> <span class="abilityText"> ${rText} </span></div>`;
 }
 
 function displayInArea(string) {
