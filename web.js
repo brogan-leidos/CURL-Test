@@ -87,7 +87,7 @@ function formatAbilityTooltip(champion, tooltip, spellType) {
     }
     
     var formatValue = "";
-    if (toFormat[0].length == 2) {
+    if (toFormat[1].length == 2) {
       if (toFormat[1][0] == "e") {
         formatValue = champion.spells[spellType].effectBurn[parseInt(toFormat[1][1])];
       }
