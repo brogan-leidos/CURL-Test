@@ -44,7 +44,8 @@ function fetchChampion(name) {
     .then(response => response.json())
     .then(fetchData => {data = fetchData;
       var abilities = parseChampionAbilities(data.data[name]);
-      displayInArea(abilities);             
+      setBackground(name);
+      displayInArea(abilities);
     });
 
 }
@@ -107,5 +108,15 @@ function displayInArea(string) {
   area.innerHTML = string;
 }
 
+function setBackground(name) {
+//http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg
+  fetch(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_0.jpg`)
+    .then(result => {
+      var area = document.getElementById("displayArea");
+      area.style.background = result;
+      area.style.backgroundSize = "cover";
+      area.style.backgroundRepeat = "no-repeat";
+  }
+}
 //http://ddragon.leagueoflegends.com/cdn/10.16.1/img/passive/Anivia_P.png
 //http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/FlashFrost.png
