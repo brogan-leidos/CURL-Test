@@ -81,7 +81,7 @@ function parseChampionAbilities(champion) {
 function formatAbilityTooltip(champion, tooltip, spellType) {
   var level = 0;
   while(true) {    
-    var toFormat = tooltip.match(/{{\s(\w*)\s}}/);
+    var toFormat = tooltip.match(/{{\s([^}]*)\s}}/);
     if (toFormat == null) {
       break;
     }
