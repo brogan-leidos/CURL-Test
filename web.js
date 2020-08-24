@@ -116,7 +116,7 @@ function setBackground(name) {
       area.style.background = result;
       area.style.backgroundSize = "cover";
       area.style.backgroundRepeat = "no-repeat";
-  }
+  });
 }
 //http://ddragon.leagueoflegends.com/cdn/10.16.1/img/passive/Anivia_P.png
 //http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/FlashFrost.png
