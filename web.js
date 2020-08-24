@@ -53,13 +53,13 @@ function parseChampionAbilities(champion) {
   var qText = formatAbilityTooltip(champion, champion.spells[0].tooltip, 0);
   var qImage = spellTemplate.replace("{0}", champion.spells[0].image.full);
   
-  var wText = champion.spells[1].tooltip;
+  var wText = formatAbilityTooltip(champion, champion.spells[1].tooltip, 1);
   var wImage = spellTemplate.replace("{0}", champion.spells[1].image.full);
 
-  var eText = champion.spells[2].tooltip;
+  var eText = formatAbilityTooltip(champion, champion.spells[2].tooltip, 2);
   var eImage = spellTemplate.replace("{0}", champion.spells[2].image.full);
 
-  var rText = champion.spells[3].tooltip;
+  var rText = formatAbilityTooltip(champion, champion.spells[3].tooltip, 3);
   var rImage = spellTemplate.replace("{0}", champion.spells[3].image.full);
 
     
