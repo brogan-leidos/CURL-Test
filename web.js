@@ -50,7 +50,7 @@ function parseChampionAbilities(champion) {
   var passiveText = champion.passive.description;
   var passiveImage = passiveTemplate.replace("{0}", champion.passive.image.full);
   
-  var qText = `<div style="font-size:16px; font-weight:16px">champion.spells[0].name</div>`
+  var qText = `<div style="font-size:16px; font-weight:bold">${champion.spells[0].name}</div>`
   qText += formatAbilityTooltip(champion, champion.spells[0].tooltip, 0);
   var qImage = spellTemplate.replace("{0}", champion.spells[0].image.full);
   
