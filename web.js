@@ -31,7 +31,15 @@ function getInputs() {
 // fetch url: http://ddragon.leagueoflegends.com/cdn/10.16.1/data/en_US/champion/<champname>.json
 function fetchChampion(name) {
   var fetchUrl = ` http://ddragon.leagueoflegends.com/cdn/10.16.1/data/en_US/champion/${name}.json`
+  var data = "";
   fetch(fetchUrl)
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(fetchData => data = fetchData);
+  
+  displayInArea(data);
+}
+
+function displayInArea(string) {
+  var area = document.getElementById("displayArea");
+  area.innerHTML = string;
 }
