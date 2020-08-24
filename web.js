@@ -15,7 +15,7 @@ function firstRun() {
 
 function fetchData() {
   getInputs();
-  fetchChamptions();
+  fetchChampions();
 }
 
 function getInputs() {
