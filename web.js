@@ -50,7 +50,7 @@ function parseChampionAbilities(champion) {
   var passiveText = champion.passive.description;
   var passiveImage = passiveTemplate.replace("{0}", champion.passive.image.full);
   
-  var qText = champion.spells[0].tooltip;
+  var qText = formatAbilitTooltip(champion, champion.spells[0].tooltip, 0);
   var qImage = spellTemplate.replace("{0}", champion.spells[0].image.full);
   
   var wText = champion.spells[1].tooltip;
@@ -68,6 +68,27 @@ function parseChampionAbilities(champion) {
                     <div class="abilityBlock"><image src=${wImage} class="abilityImage" /> <span class="abilityText"> ${wText} </span></div>
                     <div class="abilityBlock"><image src=${eImage} class="abilityImage" /> <span class="abilityText"> ${eText} </span></div>
                     <div class="abilityBlock"><image src=${rImage} class="abilityImage" /> <span class="abilityText"> ${rText} </span></div>`;
+}
+
+function formatAbilitTooltip(champion, tooltip, spellType) {
+  var level = 0;
+  while(true) {
+    var toFormat = tooltip.match(/{{\s(\w*)\s}}/);
+    if (toFormat == null) {
+      break;
+    }
+    
+    var formatValue = "";
+    if (toFormat[0] == "e") {
+      formatValue = champion.spells[spellType].effect[parseInt(toFormat[1][1])][level];
+    }
+    else if (toFormat[0] == "a") {
+      formatValue = champion.spells[spellType].vars[parseInt(toFormat[1][1])].coeff;
+    }
+    
+    tooltip = tooltip.replace(toFormat[0], formatValue);
+  }
+  return tooltip;
 }
 
 function displayInArea(string) {
