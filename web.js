@@ -94,6 +94,13 @@ function formatAbilityTooltip(champion, tooltip, spellType) {
       var filterKey = champion.spells[spellType].vars.filter(a => a.key == toFormat[1]);
       formatValue = filterKey[0].coeff;      
     }
+    else if (toFormat[1][0] == "f") {
+      var filterKey = champion.spells[spellType].vars.filter(a => a.key == toFormat[1]);
+      if (filterKey.length == 0) {
+        continue;
+      }
+      formatValue = filterKey[0].coeff;      
+    }
     else {
       formatValue = `<abbr title="${toFormat[1]}">?</abbr>`;
     }
