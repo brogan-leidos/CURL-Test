@@ -13,4 +13,5 @@ Basic plan:
     -- Magic Pen
     -- Fight duration
       -- **Reuse** abilties on CD check
+    -- Champ level (6,11,16,18)
  - Plot the results on a grid of X: AP, Y: enemy MR, Z: enemy HP (for guys like Malzahar and Lillia)
