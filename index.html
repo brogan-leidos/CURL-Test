@@ -1,49 +1,28 @@
 <!DOCTYPE html>
 <head>
-  <title>Perlin noise</title>
+  <title>curl test</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div class="sidebar">
-    <button id="genButton">Generate</button>
+    <button id="calcButton">Calculate</button>
     <div>
       New Seed? <br>
       <input type="checkbox" id="newSeedCheck" />
       <br>
-      Heightmap Mode <br>
-      <input type="checkbox" id="isHeightMap" />
-      <br>
-      Color Blend 
-      <br>
-      <input id="blendAmount" value=0 />
-      <br>
-      
-      Scale <br>
-      <input id="scale" value=100 />
-      <br>
-      
-      Fuzz <br>
-      <input id="fuzz" value=5 />
-      <br>
-      
-      Sea Level: <br>
-      <input type="range" min="20" max="250" value="70" class="slider" id="heightRange">
-      <br>
-      
-      Random Diffuse: <br>
-      <input type="range" min="1" max="10" value="1" class="slider" id="randomDiffuse">
-      <br>
-      
-      Diffuse Maps: <br>
-      <input id="numDiffuseMaps" value=2 />
-      <br>
-      
-      Use Async?
-      <input type="checkbox" id="useAsync" />
+     
+      <label for="apInput">AP:</label>
+      <input id="apInput" />
+      <label for="mpInput">Magic Pen:</label>
+      <input id="mpInput" />
+      <label for="duration">Duration (in seconds):</label>
+      <input id="duration" />                 
+      <label for="useOffCd">Use abilties off CD?:</label>
+      <input type="checkbox" id="useOffCd" />
       
     </div>
   </div>
-  <div class='centerbox'><canvas></canvas></div>  
+  <div class='canvas'><canvas></canvas></div>  
 </body>
 <script type="module" src='index.js'></script>
 
