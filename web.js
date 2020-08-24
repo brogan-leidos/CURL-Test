@@ -15,6 +15,12 @@ export default () => {
 }
 
 function firstRun() {
+  var fetchUrl = "https://ddragon.leagueoflegends.com/api/versions.json";
+  fetch(fetchUrl)
+    .then(response => response.json())
+    .then(fetchData => {
+      version = fetchData[0];
+    });
   return;
 }
 
