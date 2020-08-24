@@ -111,6 +111,7 @@ function displayInArea(string) {
 function setBackground(name) {
 //http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg
   fetch(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_0.jpg`)
+    .then(response => response.blob())
     .then(result => {
       var area = document.getElementById("displayArea");
       area.style.background = result;
