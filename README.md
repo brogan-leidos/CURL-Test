@@ -1,3 +1,3 @@
-# Noise Test
+# Curl Test
 
-https://brogan-leidos.github.io/noisejs/
+https://brogan-leidos.github.io/CURL-Test/
