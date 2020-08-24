@@ -87,16 +87,16 @@ function formatAbilityTooltip(champion, tooltip, spellType) {
     }
     
     var formatValue = "";
-    if (toFormat[1][0] == "e" && toFormat[1][0].length == 2) {
+    if (toFormat[1][0] == "e" && toFormat[1][1].length == 2) {
       formatValue = champion.spells[spellType].effectBurn[parseInt(toFormat[1][1])];
     }
-    else if (toFormat[1][0] == "a" && toFormat[1][0].length == 2) {
+    else if (toFormat[1][0] == "a" && toFormat[1][1].length == 2) {
       var filterKey = champion.spells[spellType].vars.filter(a => a.key == toFormat[1]);
       if (filterKey.length != 0) {
         formatValue = filterKey[0].coeff;    
       }
     }
-    else if (toFormat[1][0] == "f" && toFormat[1][0].length == 2) {
+    else if (toFormat[1][0] == "f" && toFormat[1][1].length == 2) {
       var filterKey = champion.spells[spellType].vars.filter(a => a.key == toFormat[1]);
       if (filterKey.length != 0) {
         formatValue = filterKey[0].coeff;
