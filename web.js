@@ -50,7 +50,7 @@ function parseChampionAbilities(champion) {
   var passiveText = champion.passive.description;
   var passiveImage = passiveTemplate.replace("{0}", champion.passive.image.full);
   
-  var qText = formatAbilitTooltip(champion, champion.spells[0].tooltip, 0);
+  var qText = formatAbilityTooltip(champion, champion.spells[0].tooltip, 0);
   var qImage = spellTemplate.replace("{0}", champion.spells[0].image.full);
   
   var wText = champion.spells[1].tooltip;
@@ -70,7 +70,7 @@ function parseChampionAbilities(champion) {
                     <div class="abilityBlock"><image src=${rImage} class="abilityImage" /> <span class="abilityText"> ${rText} </span></div>`;
 }
 
-function formatAbilitTooltip(champion, tooltip, spellType) {
+function formatAbilityTooltip(champion, tooltip, spellType) {
   var level = 0;
   while(true) {
     var toFormat = tooltip.match(/{{\s(\w*)\s}}/);
