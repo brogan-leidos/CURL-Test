@@ -16,3 +16,41 @@ body {
   padding-top: 20px;
   margin-left: 0px;
 }
+
+.abilityBlock {
+  margin: 2px;
+  padding: 1px;
+  border: thin solid black;
+  background-color: #364e85;
+}
+
+.abilityImage {
+  border: solid 2px gold;
+  box-shadow: 2px 2px 2px #666;
+  position: inherit;
+}
+
+.abilityText {
+  vertical-align: middle;
+  color: white;
+}
+
+keywordmajor {
+  color: #3be0e3;
+}
+
+spellactive {
+  color: gold;
+}
+
+spellpassive {
+  color: gold;
+}
+
+magicdamage {
+  color: #25fad6;
+}
+
+scaleap {
+  color: #44ebb3;
+}
