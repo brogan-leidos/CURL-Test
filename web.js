@@ -114,7 +114,7 @@ function setBackground(name) {
     .then(response => response.blob())
     .then(result => {
       var area = document.getElementsByTagName("BODY")[0];
-      area.style.background = `url(${result})`;
+      area.background = `url(${result})`;
       area.style.backgroundSize = "cover";
       area.style.backgroundRepeat = "no-repeat";
   });
