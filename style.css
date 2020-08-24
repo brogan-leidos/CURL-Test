@@ -19,9 +19,8 @@ body {
 }
 
 .abilityBlock {
-  margin: 4px;
+  margin: 0px 0px 6px 0px;
   padding: 3px;
-/*   border: thin solid #000; */
   background-color: #364e85;
   box-shadow: 2px 2px 2px #000;
 }
