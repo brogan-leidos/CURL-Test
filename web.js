@@ -54,24 +54,24 @@ function parseChampionAbilities(champion) {
   var passiveTemplate = `http://ddragon.leagueoflegends.com/cdn/${version}/img/passive/{0}`;
   var spellTemplate = `http://ddragon.leagueoflegends.com/cdn/${version}/img/spell/{0}`;
 
-  var passiveText = `<div style="font-size:16px; font-weight:bold">${champion.passive.name}</div>`
+  var passiveText = `<div style="font-size:16px; font-weight:bold">${champion.passive.name}</div>`;
   passiveText += champion.passive.description;
   var passiveImage = passiveTemplate.replace("{0}", champion.passive.image.full);
   
-  var qText = `<div style="font-size:16px; font-weight:bold">${champion.spells[0].name}</div>`
+  var qText = `<div style="font-size:16px; font-weight:bold">${champion.spells[0].name}</div>`;
   qText += formatAbilityTooltip(champion, champion.spells[0].tooltip, 0);
   var qImage = spellTemplate.replace("{0}", champion.spells[0].image.full);
     
-  var wText = `<div style="font-size:16px; font-weight:bold">${champion.spells[1].name}</div>`
+  var wText = `<div style="font-size:16px; font-weight:bold">${champion.spells[1].name}</div>`;
   wText += formatAbilityTooltip(champion, champion.spells[1].tooltip, 1);
   var wImage = spellTemplate.replace("{0}", champion.spells[1].image.full);
   
-  var eText = `<div style="font-size:16px; font-weight:bold">${champion.spells[2].name}</div>`
+  var eText = `<div style="font-size:16px; font-weight:bold">${champion.spells[2].name}</div>`;
   eText += formatAbilityTooltip(champion, champion.spells[2].tooltip, 2);
   var eImage = spellTemplate.replace("{0}", champion.spells[2].image.full);
 
-  var rText = `<div style="font-size:16px; font-weight:bold">${champion.spells[3].name}</div>`
-  rText+ = formatAbilityTooltip(champion, champion.spells[3].tooltip, 3);
+  var rText = `<div style="font-size:16px; font-weight:bold">${champion.spells[3].name}</div>`;
+  rText += formatAbilityTooltip(champion, champion.spells[3].tooltip, 3);
   var rImage = spellTemplate.replace("{0}", champion.spells[3].image.full);
 
     
