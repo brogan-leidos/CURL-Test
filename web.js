@@ -112,7 +112,7 @@ function formatAbilityTooltip(champion, tooltip, spellType) {
   }
   // Replace instances of class colors  
   tooltip = tooltip.replace("class=","style=")
-  tooltip = tooltip.replace("\"color","\"color:");;  
+  tooltip = tooltip.replace("\"color","\"color:#");;  
   
   return tooltip;
 }
