@@ -80,7 +80,7 @@ function parseChampionAbilities(champion) {
 
 function formatAbilityTooltip(champion, tooltip, spellType) {
   var level = 0;
-  while(true) {    
+  while(true) {    // replace variable instances (ex: {{ f1 }} )
     var toFormat = tooltip.match(/{{\s([^}]*)\s}}/);
     if (toFormat == null) {
       break;
@@ -110,6 +110,10 @@ function formatAbilityTooltip(champion, tooltip, spellType) {
     
     tooltip = tooltip.replace(toFormat[0], formatValue);
   }
+  // Replace instances of class colors  
+  tooltip = tooltip.replace("class=","style=")
+  tooltip = tooltip.replace("\"color","\"color:");;  
+  
   return tooltip;
 }
 
